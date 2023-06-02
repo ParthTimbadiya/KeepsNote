@@ -1,13 +1,121 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* #0693e3 */
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Cormorant+SC:wght@300;400;500;600;700&family=Creepster&family=Dancing+Script:wght@400;500;600;700&family=Edu+NSW+ACT+Foundation:wght@400;500;600;700&family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Ms+Madi&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Rubik+Dirt&display=swap");
+/* font-family: 'Aboreto', cursive; */
+/* font-family: 'Cormorant SC', serif; */
+/* font-family: 'Creepster', cursive; */
+/* font-family: 'Dancing Script', cursive; */
+/* font-family: 'Edu NSW ACT Foundation', cursive; */
+/* font-family: 'Frank Ruhl Libre', serif; */
+/* font-family: 'Ms Madi', cursive; */
+/* font-family: 'Playfair Display', serif; */
+/* font-family: 'Roboto', sans-serif; */
+/* font-family: 'Roboto Mono', monospace; */
+/* font-family: 'Rubik Dirt', cursive; */
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main_div {
+  height: 100vh;
+  /* overflow-y: scroll; */
+}
+.header {
+  background-color: #0693e3;
+  box-shadow: 3px 3px 5px gray;
+  position: sticky;
+  top: 0%;
+}
+h1 {
+  color: white;
+  text-transform: capitalize;
+  font-family: "Cormorant SC", serif;
+  padding: 2vh 0;
+}
+/* .main_note {
+  display: flex;
+  justify-content: center;
+} */
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 3px 3px 5px gray;
+  border-radius: 10px;
+  padding: 2vh;
+}
+.input,
+h2 {
+  border: none;
+  outline: none;
+  /* font-family: "Frank Ruhl Libre", serif; */
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.textarea,
+p {
+  border: none;
+  outline: none;
+  font-family: "Frank Ruhl Libre", serif;
+  margin-top: 5vh;
+  text-transform: capitalize;
+}
+.btn_add {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: end;
+}
+.btn_add_end {
+  text-align: end;
+}
+.note_main_div{
+    height: 50vh;
+    overflow-y: scroll;
+}
+/* .note_div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} */
+.your_note {
+    width: 100%;
+  background-color: white;
+  box-shadow: 3px 3px 4px gray;
+  border-radius: 10px;
+  padding: 3vh;
+  margin-top: 5vh;
+  /* overflow: scroll; */
+}
+.btn_delet {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #0693e3;
+  color: white;
+  box-shadow: 2px 2px 3px gray;
+}
+.btn_end {
+  text-align: end;
+}
+footer {
+  width: 100%;
+  position: fixed;
+  top: 92%;
+  left: 0;
+  text-align: center;
+  font-family: "Frank Ruhl Libre", serif;
+  color: white;
+  font-size: 2.5vh;
+  letter-spacing: 0.3vh;
+  background-color: #0693e3;
+  padding: 1vh;
+  box-shadow: -3px -3px 5px gray;
+  z-index: 1;
 }

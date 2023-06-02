@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import CreateNote from "./componets/CreateNote";
+import Footer from "./componets/Footer";
+import Header from "./componets/Header";
+import Note from "./componets/Note";
 
 function App() {
+  const [additem, setAddItem] = useState([]);
+
+  const addNote = (note) => {
+    setAddItem((prevData) => {
+      return [...prevData, note];
+    });
+  };
+
+  const onDelet = (id) => {
+    setAddItem((oldData) =>
+      oldData.filter((currData, inde) => {
+        return inde !== id;
+      })
+    );
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="main_div">
+        <Header />
+        <CreateNote passNote={addNote} />
+
+        <div className="container note_main_div">
+          <div className="row justify-content-between note_div mt-5">
+            {additem.map((val, index) => {
+              return (
+                <Note
+                  key={index}
+                  id={index}
+                  title={val.title}
+                  content={val.content}
+                  deleteItem={onDelet}
+                />
+              );
+            })}
+          </div>
+        </div>
+        <Footer />
+      </div>
+    </>
   );
 }
 
